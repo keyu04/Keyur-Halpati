@@ -1,0 +1,227 @@
+/* About Me Section */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+  margin-top: var(--space-3xl);
+}
+
+.about-text {
+  z-index: var(--z-content);
+}
+
+.about-text h1 {
+  font-size: 3rem;
+  margin-bottom: var(--space-lg);
+  line-height: 1.2;
+}
+
+.about-text h1 span {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-paragraph {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  opacity: 0.9;
+  line-height: 1.7;
+}
+
+.about-paragraph strong {
+  color: var(--color-accent-blue);
+  font-weight: 500;
+}
+
+.current-role {
+  font-size: 1.3rem;
+  margin: var(--space-xl) 0;
+  padding: var(--space-lg);
+  background: rgba(100, 200, 255, 0.1);
+  border-left: 3px solid var(--color-accent-blue);
+  border-radius: 8px;
+}
+
+.current-role strong {
+  color: var(--color-accent-purple);
+}
+
+/* Contact Info Cards */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-2xl);
+}
+
+.contact-card {
+  background: rgba(26, 31, 58, 0.6);
+  border: var(--border-primary);
+  border-radius: var(--border-radius-md);
+  padding: 25px;
+  transition: all var(--duration-normal) ease;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(100, 200, 255, 0.4);
+  box-shadow: var(--shadow-hover);
+}
+
+.contact-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--gradient-accent);
+  border-radius: var(--border-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-lg);
+}
+
+.contact-info h3 {
+  font-size: var(--text-lg);
+  margin-bottom: 5px;
+  color: var(--color-accent-blue);
+}
+
+.contact-info p {
+  font-size: var(--text-base);
+  opacity: 0.9;
+}
+
+/* Email specific styles */
+.email-link {
+  color: inherit;
+  text-decoration: none;
+  transition: all var(--duration-normal) ease;
+}
+
+.email-link:hover {
+  color: var(--color-accent-blue);
+}
+
+/* About Visual */
+.about-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visual-card {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(26, 31, 58, 0.6);
+  border: var(--border-primary);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-2xl);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-card);
+}
+
+.tech-stack {
+  margin-top: var(--space-xl);
+}
+
+.tech-stack h3 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-lg);
+  color: var(--color-accent-purple);
+  text-align: center;
+}
+
+/* Animation for about section elements */
+.about-text {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.about-text.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.visual-card {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.visual-card.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.contact-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.contact-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 1200px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+  
+  .about-text h1 {
+    font-size: 2.5rem;
+  }
+  
+  .visual-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-text h1 {
+    font-size: 2rem;
+  }
+  
+  .about-paragraph {
+    font-size: 1rem;
+  }
+  
+  .current-role {
+    font-size: 1.1rem;
+    padding: var(--space-md);
+  }
+  
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text h1 {
+    font-size: 1.8rem;
+  }
+  
+  .contact-card {
+    padding: var(--space-lg);
+  }
+  
+  .visual-card {
+    padding: var(--space-xl);
+  }
+}

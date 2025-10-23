@@ -1,0 +1,120 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm) 50px;
+  z-index: var(--z-header);
+  background: rgba(10, 14, 39, 0.8);
+  backdrop-filter: blur(10px);
+  transition: all var(--duration-normal);
+}
+
+.header.scrolled {
+  padding: var(--space-md) 50px;
+  background: rgba(10, 14, 39, 0.95);
+}
+
+.logo {
+  font-size: var(--text-5xl);
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.social-links {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+.social-links a {
+  color: var(--color-white);
+  opacity: 0.5;
+  transition: all var(--duration-normal) ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-links a:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  color: var(--color-accent-blue);
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+  z-index: var(--z-hamburger);
+}
+
+.hamburger-menu span {
+  width: 25px;
+  height: 2px;
+  background: var(--color-white);
+  transition: all var(--duration-normal) ease;
+  transform-origin: center;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.lang {
+  font-size: var(--text-xs);
+  letter-spacing: 2px;
+  opacity: 0.5;
+}
+
+.lang span {
+  margin: 0 5px;
+  cursor: pointer;
+  transition: opacity var(--duration-normal);
+}
+
+.lang span.active {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.lang span:hover {
+  opacity: 1;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .header {
+    padding: 25px 30px;
+  }
+
+  .logo {
+    font-size: var(--text-3xl);
+  }
+
+  /* Hide social links and show hamburger on mobile */
+  .social-links {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .lang {
+    display: none;
+  }
+}

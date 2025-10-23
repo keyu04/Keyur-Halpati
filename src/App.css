@@ -1,0 +1,16 @@
+/* App specific styles */
+.App {
+  position: relative;
+}
+
+/* Scroll animation */
+[data-scroll] {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all var(--duration-slow) ease;
+}
+
+[data-scroll].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
