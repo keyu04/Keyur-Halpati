@@ -48,10 +48,13 @@
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
   }
+
   100% {
     transform: translate(-50%, -50%) scale(1.5);
     opacity: 0;
@@ -85,9 +88,9 @@
 .indicator-line {
   width: 2px;
   height: 200px;
-  background: linear-gradient(to bottom, 
-      transparent 0%, 
-      rgba(100, 200, 255, 0.5) 50%, 
+  background: linear-gradient(to bottom,
+      transparent 0%,
+      rgba(100, 200, 255, 0.5) 50%,
       transparent 100%);
   position: absolute;
   right: 5px;
@@ -106,12 +109,12 @@
   .section-indicator {
     right: var(--space-md);
   }
-  
+
   .dot {
     width: 10px;
     height: 10px;
   }
-  
+
   .dot::after {
     font-size: var(--text-xs);
     right: 20px;
@@ -122,12 +125,21 @@
   .section-indicator {
     right: var(--space-sm);
   }
-  
+
+  .indicator-line {
+    height: 150px;
+    right: 3px;
+  }
+
+  .indicator-dots {
+    gap: 12px;
+  }
+
   .dot {
     width: 8px;
     height: 8px;
   }
-  
+
   .dot::after {
     font-size: var(--text-xs);
     right: 18px;

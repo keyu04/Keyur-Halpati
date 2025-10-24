@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import './Projects.css';
 
 const Projects = () => {
-  const [activeProject, setActiveProject] = useState('dashboard');
+  const [activeProject, setActiveProject] = useState('website');
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 

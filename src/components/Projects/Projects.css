@@ -74,9 +74,12 @@
 }
 
 @keyframes pulseGlow {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 0 20px rgba(100, 200, 255, 0.1);
   }
+
   50% {
     box-shadow: 0 0 30px rgba(100, 200, 255, 0.2);
   }
@@ -108,10 +111,21 @@
   letter-spacing: 0.8px;
 }
 
-.status-active { background: linear-gradient(45deg, var(--color-success), #27ae60); }
-.status-completed { background: linear-gradient(45deg, var(--color-info), #2980b9); }
-.status-planning { background: linear-gradient(45deg, var(--color-warning), #8e44ad); }
-.status-maintenance { background: linear-gradient(45deg, var(--color-danger), #c0392b); }
+.status-active {
+  background: linear-gradient(45deg, var(--color-success), #27ae60);
+}
+
+.status-completed {
+  background: linear-gradient(45deg, var(--color-info), #2980b9);
+}
+
+.status-planning {
+  background: linear-gradient(45deg, var(--color-warning), #8e44ad);
+}
+
+.status-maintenance {
+  background: linear-gradient(45deg, var(--color-danger), #c0392b);
+}
 
 .project-details {
   font-size: var(--text-sm);
@@ -151,15 +165,39 @@
 }
 
 @keyframes shimmer {
-  0% { left: -100%; }
-  100% { left: 100%; }
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 100%;
+  }
 }
 
-.progress-75 { width: 75%; background: var(--gradient-progress); }
-.progress-100 { width: 100%; background: var(--gradient-progress); }
-.progress-25 { width: 25%; background: var(--gradient-progress); }
-.progress-90 { width: 90%; background: var(--gradient-progress); }
-.progress-60 { width: 60%; background: var(--gradient-progress); }
+.progress-75 {
+  width: 75%;
+  background: var(--gradient-progress);
+}
+
+.progress-100 {
+  width: 100%;
+  background: var(--gradient-progress);
+}
+
+.progress-25 {
+  width: 25%;
+  background: var(--gradient-progress);
+}
+
+.progress-90 {
+  width: 90%;
+  background: var(--gradient-progress);
+}
+
+.progress-60 {
+  width: 60%;
+  background: var(--gradient-progress);
+}
 
 .project-tech {
   font-size: var(--text-xs);
@@ -444,154 +482,154 @@
     flex-direction: column;
     gap: var(--space-2xl);
   }
-  
+
   .wheel-section {
     width: 100%;
     max-width: 600px;
     height: 500px;
     margin: 0 auto;
   }
-  
+
   .details-section {
     width: 100%;
     max-width: 600px;
     height: auto;
     max-height: 400px;
   }
-  
+
   .center-display {
     width: 160px;
     height: 200px;
     padding: var(--space-md);
   }
-  
+
   .card {
     width: 80px;
     height: 80px;
   }
-  
+
   /* Adjusted line positions for tablet */
   .line-website {
     width: 120px;
     top: 240px;
     left: 297px;
   }
-  
+
   .line-mobile {
     width: 50px;
     top: 180px;
     left: 370px;
   }
-  
+
   .line-dashboard {
     width: 50px;
     top: 320px;
     left: 370px;
   }
-  
+
   .line-ecommerce {
     width: 35px;
     top: 350px;
     left: 298px;
   }
-  
+
   .line-api {
     width: 35px;
     top: 280px;
     left: 220px;
-}
+  }
 }
 
 @media (max-width: 768px) {
   .projects-section {
     padding: 100px 20px 60px;
   }
-  
+
   .projects-content {
     gap: var(--space-xl);
     margin-top: var(--space-2xl);
   }
-  
+
   .wheel-section {
     width: 100%;
     height: 400px;
     max-width: 400px;
   }
-  
+
   .center-display {
     width: 140px;
     height: 180px;
     padding: var(--space-md);
   }
-  
+
   .project-icon {
     font-size: var(--text-3xl);
     margin-bottom: 8px;
   }
-  
+
   .project-title {
     font-size: var(--text-md);
     margin-bottom: 6px;
   }
-  
+
   .project-status {
     font-size: var(--text-xs);
     padding: 4px 10px;
     margin-bottom: 8px;
   }
-  
+
   .project-details {
     font-size: var(--text-xs);
     margin-bottom: 8px;
   }
-  
+
   .project-tech {
     font-size: 8px;
   }
-  
+
   /* Card adjustments for mobile */
   .card {
     width: 70px;
     height: 70px;
   }
-  
+
   .card-icon {
     font-size: var(--text-lg);
     margin-bottom: 6px;
   }
-  
+
   .card-title {
     font-size: var(--text-xs);
   }
-  
+
   /* Mobile card positions - completely redesigned for better fit */
   .card.website {
     top: 30px;
     left: 50%;
     transform: translateX(-50%);
   }
-  
+
   .card.mobile {
     top: 110px;
     right: 50px;
   }
-  
+
   .card.dashboard {
     bottom: 110px;
     right: 50px;
   }
-  
+
   .card.ecommerce {
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
   }
-  
+
   .card.api {
     bottom: 110px;
     left: 50px;
   }
-  
+
   /* Mobile line adjustments - simplified for mobile */
   .line-website {
     width: 80px;
@@ -599,50 +637,50 @@
     left: 200px;
     transform: rotate(-90deg);
   }
-  
+
   .line-mobile {
     width: 40px;
     top: 150px;
     left: 250px;
     transform: rotate(-45deg);
   }
-  
+
   .line-dashboard {
     width: 40px;
     top: 250px;
     left: 250px;
     transform: rotate(45deg);
   }
-  
+
   .line-ecommerce {
     width: 25px;
     top: 275px;
     left: 200px;
     transform: rotate(90deg);
   }
-  
+
   .line-api {
     width: 45px;
     top: 220px;
     left: 150px;
     transform: rotate(135deg);
   }
-  
+
   .details-section {
     padding: var(--space-lg);
     max-height: 350px;
   }
-  
+
   .detail-item {
     margin-bottom: var(--space-md);
     padding-bottom: 12px;
   }
-  
+
   .detail-title {
     font-size: var(--text-md);
     margin-bottom: 8px;
   }
-  
+
   .instructions {
     font-size: var(--text-xs);
     padding: 6px 12px;
@@ -655,85 +693,85 @@
     height: 350px;
     max-width: 350px;
   }
-  
+
   .center-display {
     width: 120px;
     height: 150px;
     padding: 12px;
   }
-  
+
   .project-icon {
     font-size: var(--text-lg);
   }
-  
+
   .project-title {
     font-size: var(--text-xs);
   }
-  
+
   .card {
     width: 60px;
     height: 60px;
   }
-  
+
   .card-icon {
     font-size: var(--text-base);
   }
-  
+
   .card-title {
     font-size: 8px;
   }
-  
+
   /* Further adjusted positions for very small screens */
   .card.mobile {
     top: 90px;
     right: 30px;
   }
-  
+
   .card.dashboard {
     bottom: 90px;
     right: 30px;
   }
-  
+
   .card.api {
     bottom: 90px;
     left: 30px;
   }
-  
+
   /* Simplified lines for very small screens */
   .running-line {
     height: 1px;
   }
-  
+
   .line-website {
-    width: 60px;
+    width: 70px;
     top: 160px;
     left: 175px;
   }
-  
+
   .line-mobile {
-    width: 30px;
+    width: 50px;
     top: 130px;
-    left: 210px;
+    left: 230px;
   }
-  
+
   .line-dashboard {
-    width: 30px;
+    width: 35px;
     top: 210px;
-    left: 210px;
+    left: 235px;
   }
-  
+
   .line-ecommerce {
-    width: 20px;
-    top: 225px;
+    width: 35px;
+    top: 250px;
     left: 175px;
   }
-  
+
   .line-api {
-    width: 35px;
-    top: 185px;
-    left: 140px;
+    width: 40px;
+    top: 187px;
+    left: 120px;
   }
-  
+
   .instructions {
     font-size: var(--text-xs);
     padding: 4px 10px;
